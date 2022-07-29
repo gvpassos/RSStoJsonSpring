@@ -32,7 +32,7 @@ public class Controlador {
         // create a request
         var request = HttpRequest.newBuilder(
                 uri)
-                .header("CONTENT_LANGUAGE", "xml")
+                .header("CONTENT_LANGUAGE", "application/x-www-form-urlencoded")
                 .build();
 
         // use the client to send the request
