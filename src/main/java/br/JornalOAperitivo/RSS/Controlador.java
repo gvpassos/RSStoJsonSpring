@@ -22,7 +22,7 @@ public class Controlador {
     }
 
     @GetMapping(value = "/Noticias")
-    public String noticias() {
+    public ArrayList<Noticias> noticias() {
         // web conect
         URI uri = URI.create("https://www.jornaloaperitivo.com.br/feeds/posts/default");
 
@@ -44,10 +44,10 @@ public class Controlador {
                 System.out.println(c);
                 Noticias noti = new Noticias(lista[c]);
                 ListadNoticias.add(noti);
-                Aux += noti.json() + ",";
+                Aux += noti.json();
             }
             Aux += "]";
-            return Aux;
+            return ListadNoticias;
         } catch (IOException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
@@ -56,7 +56,7 @@ public class Controlador {
             e.printStackTrace();
         }
 
-        return "hoje nao";
+        return null;
     }
 
 }
