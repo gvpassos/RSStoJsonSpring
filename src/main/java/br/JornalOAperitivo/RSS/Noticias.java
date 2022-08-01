@@ -43,4 +43,20 @@ public class Noticias {
 
         }
 
+        public String getTitulo() {
+                return titulo;
+        }
+
+        public String getData() {
+                return data;
+        }
+
+        public String getLinkNoticia() {
+                return linkNoticia;
+        }
+
+        public String getLinkimagem() {
+                return linkimagem;
+        }
+
 }
